@@ -1,0 +1,61 @@
+@import '../../sass/lib/';
+
+.footer {
+    // position: fixed;
+    background-color: $black;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    width: 100%;
+    padding: 100px 0;
+    z-index: -1;
+    color: white;
+    .emoji {
+        display: block;
+        text-align: center;
+        font-size: 40px;
+    }
+    @include breakpoint(lg) {
+        height: 100vh;
+        min-height: 750px;
+        .container, .row {
+            height: 100%;
+        }
+    }
+}
+
+
+
+.footer-btns {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    li {
+        flex: 1;
+        text-align: center;
+        a {
+            display: block;
+            &:hover, &:focus {
+                svg {
+                    fill: $white;
+                }
+                svg path {
+                    fill: $white;
+                }
+            }
+        }
+        svg {
+            display: block;
+            height: 30px;
+            width: 30px;
+            margin: auto;
+            fill: $grey;
+            transition: .3s ease;
+        }
+        svg path {
+            fill: $grey;
+            transition: .3s ease;
+        }
+    }
+}

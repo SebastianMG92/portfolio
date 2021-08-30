@@ -1,0 +1,123 @@
+@import '../../sass/lib/';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $black;
+    z-index: 900;
+    padding: 15px 0;
+    box-shadow: 0 0 black;
+    transition: .3s ease;
+    &.is-sticky {
+        padding: 10px 0;
+        box-shadow: 0px 1px 2px 3px #d1d1d1;
+    }
+    @include breakpoint(md) {
+        right: initial;
+        bottom: 0;
+        height: 100vh;
+        width: 100%;
+        max-width: 25vw;
+        &.is-sticky {
+            max-width: 50px;
+            padding: 15px 0;
+            box-shadow: initial;
+            &:hover, &:focus {
+                max-width: 150px;
+            }
+        }
+        .container, .row, .col-12 {
+            height: 100%;
+        }
+    }
+}
+
+.header-nav {
+    @include breakpoint(md) {
+        height: 100%;
+    }
+}
+
+
+.header-menu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    @include breakpoint(md) {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+.header-menu--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    a {
+        display: block;
+        color: $grey;
+        text-decoration: none;
+        transition: .3s ease;
+        &:hover, &:focus {
+            color: $white;
+            svg path {
+                fill: $white;
+            }
+        }
+    }
+    @include breakpoint(md) {
+        text-align: left;
+        justify-content: flex-start;
+        flex: initial;
+        margin: 0 0 30px;
+        width: 100%;
+        &:last-child {
+            margin: 0;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            &:hover, &:focus {
+                .header-menu--item--sectionName {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.header-menu--item--sectionName {
+    display: none;
+    @include breakpoint(md) {
+        display: inline-block;
+        overflow: hidden;
+        width: 0%;
+        white-space: nowrap;
+        transition: .3s width ease;
+    }
+}
+
+.header-menu--item--index {
+    font-size: 18px;
+    line-height: 1;
+    svg {
+        display: block;
+        margin: auto;
+        width: 18px;
+    }
+    svg path {
+        transition: .3s ease;
+        fill: $grey;
+    }
+    @include breakpoint(md) {
+        margin: 0 10px 0 0
+    }
+}

@@ -1,0 +1,97 @@
+@import '../../sass/lib/';
+
+.hero {
+    position: relative;
+    padding: 50px 0 20px;
+    background-color: $white;
+    .container-fluid, .row {
+        height: 100%;
+    }
+    @include breakpoint(md) {
+        height: 100vh;
+        min-height: 500px;
+    }
+}
+
+
+.hero-content {
+    align-self: flex-end;
+    .preheading {
+        display: block;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .heading {
+        font-weight: 900;
+        margin: 0;
+        font-size: 40px;
+        span {
+            display: block;
+            font-size: 20px;
+        }
+    }
+    @include breakpoint(md) {
+        align-self: center;
+    }
+    @include breakpoint(lg) {
+        .preheading {
+            font-size: 30px;
+        }
+        .heading {
+            font-size: 50px;
+            span {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include breakpoint(lg) {
+        flex-direction: row;
+        .btn:first-child {
+            margin-right: 30px;
+        }
+    }
+}
+
+.hero-image {
+    position: relative;
+    @include breakpoint(md) {
+        z-index: 900;
+        align-self: center;
+    }
+}
+
+.btn-solid {
+    border-radius: 0;
+    font-weight: 100;
+    &.btn-black {
+        background-color: $black;
+        color: $white;
+    }
+    &.btn-white {
+        background-color: $white;
+        color: $black;
+        border: 1px solid $black;
+    }
+}
+
+.hero-image-frame {
+    position: relative;
+    margin: 0 auto;
+    max-width: 90%;
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 15px;
+        right: -15px;
+        height: 100%;
+        width: 100%;
+        border: 2px solid $black;
+    }
+}

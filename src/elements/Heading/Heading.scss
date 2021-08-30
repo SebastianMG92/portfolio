@@ -1,0 +1,11 @@
+@import '../../sass/lib/';
+
+
+.heading {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0;
+    @include breakpoint(lg) {
+        font-size: 30px;
+    }
+}

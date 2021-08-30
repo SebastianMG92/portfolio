@@ -1,0 +1,22 @@
+@import '../../sass/lib/';
+
+
+.textScroll {
+    position: relative;
+    background-color: $white;
+    z-index: 1;
+    padding: 50px 0;
+}
+
+.textScroll-text {
+    width: 100%;
+    overflow: hidden;
+    .text {
+        display: flex;
+        font-size: clamp(8rem, 15vw, 16rem);
+        line-height: 1;
+        font-weight: 900;
+        margin: 0;
+        white-space: nowrap;
+    } 
+}

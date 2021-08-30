@@ -1,0 +1,35 @@
+@import '../../sass/lib/';
+
+
+.bigText {
+    position: relative;
+    z-index: 1;
+    background-color: $white;
+    padding: 50px 0;
+    .container, .row {
+        height: 100%;
+    }
+    @include breakpoint(lg) {
+        padding: 20px 0 150px;
+    }
+}
+
+
+.bigText__content {
+    align-self: center;
+    .text {
+        font-size: 30px;
+        line-height: 1.2;
+        margin: 0;
+    }
+    @include breakpoint(md) {
+        .text {
+            font-size: 40px;
+        }
+    }
+    @include breakpoint(lg) {
+        .text {
+            font-size: 4vw;
+        }
+    }
+}

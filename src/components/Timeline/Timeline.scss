@@ -1,0 +1,125 @@
+@import '../../sass/lib/';
+
+.timeline {
+    position: relative;
+    z-index: 1;
+    background-color: $black;
+    padding: 50px 0;
+    @include breakpoint(lg) {
+        padding: 100px 0;
+    }
+}
+
+
+.timeline-container {
+    position: relative;
+    display: flex;
+}
+
+.timeline-progress {
+    position: relative;
+    flex-basis: 50px;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        background-color: $white;
+        transform: translateX(-50%);
+        height: 100%;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: var(--progress, 0%);
+        height: 50px;
+        left: 50%;
+        width: 7px;
+        background-color: $grey;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    @include breakpoint(md) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+    }
+}
+
+.timeline-experiences{
+    flex-basis: calc(100% - 50px);
+    @include breakpoint(md) {
+        flex-basis: 100%;
+        
+    }
+}
+
+.timeline-experience {
+    color: white;
+    margin-top: 100px;
+    padding: 0 15px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: .3s ease;
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 150px;
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+    @include breakpoint(lg) {
+        margin-top: 250px;
+    }
+}
+
+.timeline-experience-year {
+    font-size: 18px;
+    font-weight: 600;
+    @include breakpoint(md) {
+        flex-basis: calc(50% - 25px);
+    }
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+}
+
+.timeline-experience-content {
+    .heading {
+        font-size: 25px;
+        font-weight: 900;
+        margin: 0;
+    }
+    .preheading {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .text {
+        margin: 0;
+    }
+    @include breakpoint(md) {
+        flex-basis: calc(50% - 25px);
+    }
+    @include breakpoint(lg) {
+        .heading {
+            font-size: 30px;
+        }
+        .preheading {
+            font-size: 20px;
+        }
+        .text {
+            font-size: 18px;
+        }
+    }
+}

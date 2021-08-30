@@ -1,0 +1,7 @@
+@import '../../sass/lib/';
+
+.text {
+    @include breakpoint(lg) {
+        font-size: 18px;
+    }
+}

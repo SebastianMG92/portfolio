@@ -5,3 +5,8 @@
  */
 
 // You can delete this file if you're not using it
+
+const React = require("react")
+const Layout = require("./src/components/Layout/Layout").default
+
+exports.wrapRootElement = ({ element }) => <Layout>{element}</Layout>
