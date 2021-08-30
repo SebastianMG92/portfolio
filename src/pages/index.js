@@ -24,7 +24,7 @@ export const query = graphql`
 const IndexPage = ({ data }) => {
   return (
     <>
-      <Seo title="Home" />
+      <Seo title="Sebastian Marin" />
       <Hero id={'intro'} />
       <BigText id={'about'} />
       <Timeline id={'experience'} />

@@ -25,7 +25,7 @@ export default function Hero({ id }) {
                     </div>
                     <div className={`col-12 col-sm-10 col-md-5 offset-md-1 hero-image`}>
                         <figure className={`hero-image-frame`}>
-                            <Image name="personal-pic.jpg" />
+                            <Image name="163029279682349936.jpg" />
                             <Particles />
                         </figure>
                     </div>
