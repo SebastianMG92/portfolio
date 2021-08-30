@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-index-js",
+    "path": "/",
+    "result": {"data":{"allSite":{"edges":[{"node":{"siteMetadata":{"title":"Sebastian portfolio","description":"My personal portfolio page","author":"@sebastianm.jpg","siteUrl":"http://subtexto.co"}}}]}},"pageContext":{}},
+    "staticQueryHashes": ["1333452380","63159454"]}
