@@ -5,7 +5,7 @@ module.exports = {
     description: `My personal portfolio page`,
     author: `@sebastianm.jpg`,
     siteUrl: `http://subtexto.co/`,
-    image: `src/images/163029279682349936.jpg`,
+    image: `${__dirname}/src/images/163029279682349936.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
